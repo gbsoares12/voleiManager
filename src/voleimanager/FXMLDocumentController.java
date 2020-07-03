@@ -130,7 +130,7 @@ public class FXMLDocumentController implements Initializable {
             if (this.partida.getSetAtual() > 5 || equipe1.getSetsGanhos() > 2) {
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Partida Encerrada");
-                alert.setHeaderText("Partida Ganha pelo time: \n" + this.partida.getEquipe1().getNome());
+                alert.setHeaderText("Partida Ganha pela equipe: \n" + this.partida.getEquipe1().getNome());
                 alert.setContentText("Historico da partida:\n\n"
                         + "Equipe : " + this.partida.getEquipe1().getNome()
                         + "\n set 01: " + this.partida.getEquipe1().getPontuacaoHistorico()[0]
@@ -214,7 +214,7 @@ public class FXMLDocumentController implements Initializable {
     public boolean indentificaTerminoDoSet(Equipe equipeAtual, Equipe equipeAdversaria, PartidaVolei partidaAtual) {
         return ((equipeAtual.getPontuacao() - equipeAdversaria.getPontuacao()) >= 1
                 || (partidaAtual.getSetAtual() < 5) && (equipeAtual.getPontuacao() == 24)
-                || (partidaAtual.getSetAtual() == 5) && (equipeAtual.getPontuacao() == 14));
+                || (partidaAtual.getSetAtual() == 4) && (equipeAtual.getPontuacao() == 14));
     }
 
     public void resetaTextFields() {
