@@ -24,6 +24,7 @@ public class VoleiManager extends Application {
         Scene scene = new Scene(root);
         stage.titleProperty().set("Volei Manager");
         stage.setScene(scene);
+        stage.resizableProperty().set(false);
         stage.show();
     }
 
