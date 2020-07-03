@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="717.0" prefWidth="960.0" style="-fx-background-color: EEEEEE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voleimanager.FXMLDocumentController">
+    <children>
+        <Button fx:id="iniciarButton" layoutX="482.0" layoutY="244.0" text="Iniciar Jogo" />
+      <TilePane alignment="CENTER" prefWidth="1060.0" style="-fx-background-color: EEEEEE;" tileAlignment="BASELINE_CENTER">
+         <children>
+            <Text opacity="0.91" strokeType="OUTSIDE" strokeWidth="0.0" text="Volei Manager" textAlignment="CENTER">
+               <font>
+                  <Font name="Verdana Bold Italic" size="53.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </TilePane>
+      <Label fx:id="horaLabel" layoutX="408.0" layoutY="124.0" text="Horário da partida:" />
+      <TextField fx:id="horaTextField" layoutX="540.0" layoutY="119.0" prefHeight="31.0" prefWidth="112.0" />
+      <Label layoutX="281.0" layoutY="178.0" text="Equipe 1:" />
+      <TextField fx:id="equipe1TextField" layoutX="348.0" layoutY="173.0" prefHeight="31.0" prefWidth="143.0" />
+      <Label layoutX="533.0" layoutY="178.0" text="Equipe 2:" />
+      <TextField fx:id="equipe2TextField" layoutX="602.0" layoutY="173.0" prefHeight="31.0" prefWidth="143.0" />
+      <Pane fx:id="pontuacoesEquipe1Pane" layoutX="187.0" layoutY="349.0" prefHeight="126.0" prefWidth="250.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="89.0" layoutY="5.0" text="Equipe 1">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutY="33.0" prefHeight="2.0" prefWidth="250.0" />
+            <Label layoutX="92.0" layoutY="48.0" text="Pontos:" />
+            <Label layoutX="110.0" layoutY="80.0" text="Sets:" />
+            <Label fx:id="setsEquipe1Label" layoutX="150.0" layoutY="80.0" text="0" />
+            <Label fx:id="pontuacaoEquipe1Label" layoutX="150.0" layoutY="48.0" text="0" />
+         </children>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Pane>
+      <Pane fx:id="pontuacoesEquipe2Pane" layoutX="602.0" layoutY="349.0" prefHeight="126.0" prefWidth="250.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="89.0" layoutY="5.0" text="Equipe 2">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-1.0" layoutY="32.0" prefHeight="2.0" prefWidth="250.0" />
+            <Label layoutX="90.0" layoutY="44.0" text="Pontos:" />
+            <Label layoutX="108.0" layoutY="77.0" text="Sets:" />
+            <Label fx:id="pontuacaoEquipe2Label" layoutX="146.0" layoutY="44.0" text="0" />
+            <Label fx:id="setsEquipe2Label" layoutX="146.0" layoutY="77.0" text="0" />
+         </children>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Pane>
+      <Button fx:id="adicionarPontoEquipe1Button" layoutX="249.0" layoutY="484.0" mnemonicParsing="false" text="Adicionar Ponto" />
+      <Button fx:id="adicionarPontoEquipe2Button" layoutX="664.0" layoutY="484.0" mnemonicParsing="false" text="Adicionar Ponto" />
+    </children>
+</AnchorPane>
