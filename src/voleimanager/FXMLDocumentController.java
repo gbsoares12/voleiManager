@@ -114,7 +114,7 @@ public class FXMLDocumentController implements Initializable {
         Equipe equipe1 = this.partida.getEquipe1();
         Equipe equipe2 = this.partida.getEquipe2();
 
-        if (indentificaTerminoDoSet(equipe1, equipe2, partida)) {
+        if (identificaTerminoDoSet(equipe1, equipe2, partida)) {
             // Adiciona os pontos no histórico da partida
             equipe1.adicionarPontuacaoHistorico(equipe1.getPontuacao() != 0 ? equipe1.getPontuacao() + 1 : equipe1.getPontuacao(), this.partida.getSetAtual());
             equipe2.adicionarPontuacaoHistorico(equipe2.getPontuacao(), this.partida.getSetAtual());
@@ -130,7 +130,7 @@ public class FXMLDocumentController implements Initializable {
             if (this.partida.getSetAtual() > 5 || equipe1.getSetsGanhos() > 2) {
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Partida Encerrada");
-                alert.setHeaderText("Partida Ganha pela equipe: \n" + equipe1.getNome());
+                alert.setHeaderText("Partida Ganha pela equipe: \n" + equipe1.getNome() + "\nInício da partida as " + horaTextField.getText());
                 alert.setContentText("Historico da partida:\n\n"
                         + "Equipe : " + equipe1.getNome()
                         + "\n set 01: " + equipe1.getPontuacaoHistorico()[0]
@@ -165,7 +165,7 @@ public class FXMLDocumentController implements Initializable {
         Equipe equipe1 = this.partida.getEquipe1();
         Equipe equipe2 = this.partida.getEquipe2();
 
-        if (indentificaTerminoDoSet(equipe2, equipe1, partida)) {
+        if (identificaTerminoDoSet(equipe2, equipe1, partida)) {
             // Adiciona os pontos no histórico da partida
             equipe2.adicionarPontuacaoHistorico(equipe2.getPontuacao() != 0 ? equipe2.getPontuacao() + 1 : equipe2.getPontuacao(), this.partida.getSetAtual());
             equipe1.adicionarPontuacaoHistorico(equipe1.getPontuacao(), this.partida.getSetAtual());
@@ -211,7 +211,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     // Verifica se a equipe atual ganhou o set.
-    public boolean indentificaTerminoDoSet(Equipe equipeAtual, Equipe equipeAdversaria, PartidaVolei partidaAtual) {
+    public boolean identificaTerminoDoSet(Equipe equipeAtual, Equipe equipeAdversaria, PartidaVolei partidaAtual) {
         return ((equipeAtual.getPontuacao() - equipeAdversaria.getPontuacao()) >= 1
                 || (partidaAtual.getSetAtual() < 5) && (equipeAtual.getPontuacao() == 24)
                 || (partidaAtual.getSetAtual() == 4) && (equipeAtual.getPontuacao() == 14));

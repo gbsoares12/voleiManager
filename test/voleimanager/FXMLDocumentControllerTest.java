@@ -40,7 +40,7 @@ public class FXMLDocumentControllerTest {
         PartidaVolei partidaAtual = new PartidaVolei(equipeAtual, equipeAdversaria, "00:00:00");
         FXMLDocumentController instance = new FXMLDocumentController();
         boolean expResult = true;
-        boolean result = instance.indentificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
+        boolean result = instance.identificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
         assertEquals(expResult, result);
     }
     
@@ -54,7 +54,7 @@ public class FXMLDocumentControllerTest {
         partidaAtual.setSetAtual(1);
         FXMLDocumentController instance = new FXMLDocumentController();
         boolean expResult = true;
-        boolean result = instance.indentificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
+        boolean result = instance.identificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
         assertEquals(expResult, result);
     }
     
@@ -69,7 +69,7 @@ public class FXMLDocumentControllerTest {
         partidaAtual.setSetAtual(5);
         FXMLDocumentController instance = new FXMLDocumentController();
         boolean expResult = true;
-        boolean result = instance.indentificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
+        boolean result = instance.identificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
         assertEquals(expResult, result);
     }
 }
