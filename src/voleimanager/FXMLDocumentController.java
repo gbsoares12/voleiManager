@@ -130,25 +130,25 @@ public class FXMLDocumentController implements Initializable {
             if (this.partida.getSetAtual() > 5 || equipe1.getSetsGanhos() > 2) {
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Partida Encerrada");
-                alert.setHeaderText("Partida Ganha pela equipe: \n" + this.partida.getEquipe1().getNome());
+                alert.setHeaderText("Partida Ganha pela equipe: \n" + equipe1.getNome());
                 alert.setContentText("Historico da partida:\n\n"
-                        + "Equipe : " + this.partida.getEquipe1().getNome()
-                        + "\n set 01: " + this.partida.getEquipe1().getPontuacaoHistorico()[0]
-                        + "\n set 02: " + this.partida.getEquipe1().getPontuacaoHistorico()[1]
-                        + "\n set 03: " + this.partida.getEquipe1().getPontuacaoHistorico()[2]
-                        + "\n set 04: " + this.partida.getEquipe1().getPontuacaoHistorico()[3]
-                        + "\n set 05: " + this.partida.getEquipe1().getPontuacaoHistorico()[4]
+                        + "Equipe : " + equipe1.getNome()
+                        + "\n set 01: " + equipe1.getPontuacaoHistorico()[0]
+                        + "\n set 02: " + equipe1.getPontuacaoHistorico()[1]
+                        + "\n set 03: " + equipe1.getPontuacaoHistorico()[2]
+                        + "\n set 04: " + equipe1.getPontuacaoHistorico()[3]
+                        + "\n set 05: " + equipe1.getPontuacaoHistorico()[4]
                         + "\nTotal de sets ganhos: "
-                        + this.partida.getEquipe1().getSetsGanhos()
+                        + equipe1.getSetsGanhos()
                         + " \n\n\n"
-                        + "Equipe: " + this.partida.getEquipe2().getNome()
-                        + "\n set 01: " + this.partida.getEquipe2().getPontuacaoHistorico()[0]
-                        + "\n set 02: " + this.partida.getEquipe2().getPontuacaoHistorico()[1]
-                        + "\n set 03: " + this.partida.getEquipe2().getPontuacaoHistorico()[2]
-                        + "\n set 04: " + this.partida.getEquipe2().getPontuacaoHistorico()[3]
-                        + "\n set 05: " + this.partida.getEquipe2().getPontuacaoHistorico()[4]
+                        + "Equipe: " + equipe2.getNome()
+                        + "\n set 01: " + equipe2.getPontuacaoHistorico()[0]
+                        + "\n set 02: " + equipe2.getPontuacaoHistorico()[1]
+                        + "\n set 03: " + equipe2.getPontuacaoHistorico()[2]
+                        + "\n set 04: " + equipe2.getPontuacaoHistorico()[3]
+                        + "\n set 05: " + equipe2.getPontuacaoHistorico()[4]
                         + "\nTotal de sets ganhos: "
-                        + this.partida.getEquipe2().getSetsGanhos());
+                        + equipe2.getSetsGanhos());
                 alert.showAndWait();
                 resetaTextFields();
             }
@@ -181,25 +181,25 @@ public class FXMLDocumentController implements Initializable {
             if (this.partida.getSetAtual() > 5 || equipe2.getSetsGanhos() > 2) {
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Partida Encerrada");
-                alert.setHeaderText("Partida ganha pelo time: \n" + this.partida.getEquipe2().getNome());
+                alert.setHeaderText("Partida ganha pelo time: \n" + equipe2.getNome());
                 alert.setContentText("Historico da partida:\n\n"
-                        + "Equipe : " + this.partida.getEquipe2().getNome()
-                        + "\n set 01: " + this.partida.getEquipe2().getPontuacaoHistorico()[0]
-                        + "\n set 02: " + this.partida.getEquipe2().getPontuacaoHistorico()[1]
-                        + "\n set 03: " + this.partida.getEquipe2().getPontuacaoHistorico()[2]
-                        + "\n set 04: " + this.partida.getEquipe2().getPontuacaoHistorico()[3]
-                        + "\n set 05: " + this.partida.getEquipe2().getPontuacaoHistorico()[4]
+                        + "Equipe : " + equipe2.getNome()
+                        + "\n set 01: " + equipe2.getPontuacaoHistorico()[0]
+                        + "\n set 02: " + equipe2.getPontuacaoHistorico()[1]
+                        + "\n set 03: " + equipe2.getPontuacaoHistorico()[2]
+                        + "\n set 04: " + equipe2.getPontuacaoHistorico()[3]
+                        + "\n set 05: " + equipe2.getPontuacaoHistorico()[4]
                         + "\n\nTotal de sets ganhos: "
-                        + this.partida.getEquipe2().getSetsGanhos()
+                        + equipe2.getSetsGanhos()
                         + " \n\n\n"
-                        + "Equipe: " + this.partida.getEquipe1().getNome()
-                        + "\n set 01: " + this.partida.getEquipe1().getPontuacaoHistorico()[0]
-                        + "\n set 02: " + this.partida.getEquipe1().getPontuacaoHistorico()[1]
-                        + "\n set 03: " + this.partida.getEquipe1().getPontuacaoHistorico()[2]
-                        + "\n set 04: " + this.partida.getEquipe1().getPontuacaoHistorico()[3]
-                        + "\n set 05: " + this.partida.getEquipe1().getPontuacaoHistorico()[4]
+                        + "Equipe: " + equipe1.getNome()
+                        + "\n set 01: " + equipe1.getPontuacaoHistorico()[0]
+                        + "\n set 02: " + equipe1.getPontuacaoHistorico()[1]
+                        + "\n set 03: " + equipe1.getPontuacaoHistorico()[2]
+                        + "\n set 04: " + equipe1.getPontuacaoHistorico()[3]
+                        + "\n set 05: " + equipe1.getPontuacaoHistorico()[4]
                         + "\n\nTotal de sets ganhos: "
-                        + this.partida.getEquipe1().getSetsGanhos());
+                        + equipe1.getSetsGanhos());
                 alert.showAndWait();
                 resetaTextFields();
             }
