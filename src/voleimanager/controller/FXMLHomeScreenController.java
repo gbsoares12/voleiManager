@@ -25,7 +25,7 @@ import voleimanager.model.PartidaVolei;
  *
  * @author gabriel
  */
-public class FXMLDocumentController implements Initializable {
+public class FXMLHomeScreenController implements Initializable {
 
     Date dataHoraAtual = new Date();
 

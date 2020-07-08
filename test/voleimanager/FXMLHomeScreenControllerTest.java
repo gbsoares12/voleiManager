@@ -5,7 +5,7 @@
  */
 package voleimanager;
 
-import voleimanager.controller.FXMLDocumentController;
+import voleimanager.controller.FXMLHomeScreenController;
 import java.net.URL;
 import java.util.ResourceBundle;
 import org.junit.After;
@@ -21,9 +21,9 @@ import voleimanager.model.PartidaVolei;
  *
  * @author gabriel
  */
-public class FXMLDocumentControllerTest {
+public class FXMLHomeScreenControllerTest {
 
-    public FXMLDocumentControllerTest() {
+    public FXMLHomeScreenControllerTest() {
     }
 
     /**
@@ -39,7 +39,7 @@ public class FXMLDocumentControllerTest {
         Equipe equipeAtual = new Equipe("Testador 1", 2, 2);
         Equipe equipeAdversaria = new Equipe("Testador 2", 0, 0);
         PartidaVolei partidaAtual = new PartidaVolei(equipeAtual, equipeAdversaria, "00:00:00");
-        FXMLDocumentController instance = new FXMLDocumentController();
+        FXMLHomeScreenController instance = new FXMLHomeScreenController();
         boolean expResult = true;
         boolean result = instance.identificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
         assertEquals(expResult, result);
@@ -53,7 +53,7 @@ public class FXMLDocumentControllerTest {
         Equipe equipeAdversaria = new Equipe("Testador 2", 0, 0);
         PartidaVolei partidaAtual = new PartidaVolei(equipeAtual, equipeAdversaria, "00:00:00");
         partidaAtual.setSetAtual(1);
-        FXMLDocumentController instance = new FXMLDocumentController();
+        FXMLHomeScreenController instance = new FXMLHomeScreenController();
         boolean expResult = true;
         boolean result = instance.identificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
         assertEquals(expResult, result);
@@ -68,7 +68,7 @@ public class FXMLDocumentControllerTest {
         Equipe equipeAdversaria = new Equipe("Testador 2", 0, 0);
         PartidaVolei partidaAtual = new PartidaVolei(equipeAtual, equipeAdversaria, "00:00:00");
         partidaAtual.setSetAtual(5);
-        FXMLDocumentController instance = new FXMLDocumentController();
+        FXMLHomeScreenController instance = new FXMLHomeScreenController();
         boolean expResult = true;
         boolean result = instance.identificaTerminoDoSet(equipeAtual, equipeAdversaria, partidaAtual);
         assertEquals(expResult, result);
